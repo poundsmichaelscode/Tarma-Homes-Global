@@ -5,7 +5,7 @@ import { toast } from "sonner";
 import { getProperty, relatedProperties } from "@/data/properties";
 import { PropertyCard } from "@/components/site/PropertyCard";
 import { fieldClass } from "@/components/site/SearchBar";
-import { formatNaira, whatsappLink } from "@/lib/site";
+import { formatNaira, SITE, whatsappLink } from "@/lib/site";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/properties/$slug")({
@@ -128,6 +128,7 @@ function PropertyPage() {
             }}
           >
             <h2 className="text-2xl">Schedule an Inspection</h2>
+            <p className="text-sm text-muted-foreground">Prefer email? <a className="font-semibold text-primary underline underline-offset-2" href={`mailto:${SITE.email}?subject=${encodeURIComponent(`Property enquiry: ${p.title}`)}`}>{SITE.email}</a></p>
             <input required aria-label="Full name" placeholder="Full name" className={fieldClass} value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
             <input required aria-label="Phone number" type="tel" placeholder="Phone number" className={fieldClass} value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} />
             <div className="grid grid-cols-2 gap-3">
