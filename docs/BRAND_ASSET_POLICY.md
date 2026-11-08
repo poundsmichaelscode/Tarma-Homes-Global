@@ -129,3 +129,16 @@ The user uploaded 14 photo files directly in the chat. The first exterior photog
 Image path in project: `public/images/approved/lekki-phase-1-detached-duplex/`.
 
 Install `Tamar-Homes-Lekki-Phase-1-Duplex-Images.zip` at the repository root to populate those paths. **Images have been packaged locally but are not yet uploaded to GitHub.** The code paths and test were committed to `feat/tamar-brand-asset-foundation` only. Validate the local build after installing assets and before merging.
+
+## Fifth property development — Ikate, Lekki (2026-11-08)
+
+The user submitted **12 photographs** of a serviced apartment development in Ikate, Lekki. Their pricing is for three distinct configurations: **1-bedroom ₦180 million**, **2-bedroom ₦200 million**, **3-bedroom ₦350 million**. These are three catalogue entries, not one unit priced at three amounts.
+
+- Slugs: `1-bedroom-serviced-apartment-ikate-development`, `2-bedroom-serviced-apartment-ikate-development`, `3-bedroom-serviced-apartment-ikate-development`
+- Shared photo folder: `public/images/approved/ikate-serviced-apartment-development/`
+- Gallery: `exterior.webp` (source `IMG_2457.jpg`) plus `gallery-02.webp` to `gallery-12.webp` (11 other user-supplied photos).
+- Asset ZIP: `Tamar-Homes-Ikate-Development-Photos.zip`; extract at the repository root.
+- Photography is representative of the overall **development** and not identified as belonging to any particular 1-, 2-, or 3-bedroom unit. Do not claim that specific room images belong to one configuration.
+- No elevator, pool, parking, bathroom count, square footage, exact address, title documents or completion date were supplied for this development. These details are deliberately not claimed.
+- The existing **₦250m 3-bedroom Ikate apartment** is a *separate earlier listing* and remains unchanged.
+- Code references were committed to the development branch, but actual binary images must be installed and pushed separately before the gallery renders without placeholders.
