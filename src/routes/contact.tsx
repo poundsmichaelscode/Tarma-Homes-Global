@@ -6,7 +6,7 @@ import { SITE, whatsappLink } from "@/lib/site";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/contact")({
-  head: () => seo("Contact Us", "Get in touch with TARMAR HOMES about buying, selling or inspecting a property.", "/contact"),
+  head: () => seo("Contact Us", "Get in touch with TAMAR HOMES about buying, selling or inspecting a property.", "/contact"),
   component: ContactPage,
 });
 
@@ -19,7 +19,7 @@ function ContactPage() {
           {[
             { i: Phone, l: "Phone", v: SITE.phoneDisplay, href: `tel:+${SITE.whatsapp}` },
             { i: Mail, l: "Email", v: SITE.email, href: `mailto:${SITE.email}` },
-            { i: MessageCircle, l: "WhatsApp", v: "Chat with us", href: whatsappLink("Hello TARMAR HOMES") },
+            { i: MessageCircle, l: "WhatsApp", v: "Chat with us", href: whatsappLink("Hello TAMAR HOMES") },
             { i: MapPin, l: "Office", v: SITE.address },
           ].map(({ i: I, l, v, href }) => (
             <li key={l} className="flex gap-4 rounded-2xl border bg-card p-5">
@@ -28,7 +28,7 @@ function ContactPage() {
             </li>
           ))}
         </ul>
-        <EnquiryForm title="Send us a message" intro="Hello TARMAR HOMES, I have an enquiry." submitLabel="Send via WhatsApp"
+        <EnquiryForm title="Send us a message" intro="Hello TAMAR HOMES, I have an enquiry." submitLabel="Send via WhatsApp"
           fields={[
             { name: "name", label: "Full name" },
             { name: "phone", label: "Phone number", type: "tel" },
