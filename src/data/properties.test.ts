@@ -52,4 +52,24 @@ describe("Tamar Homes property catalogue", () => {
     expect(property.images[0]).toBe("/images/approved/lekki-phase-1-two-bedroom-serviced-apartment/exterior.webp");
   });
 
+  it("adds three priced Ikate development options without changing the original Ikate listing", () => {
+    const options = properties.slice(4, 7);
+    expect(options.map((property) => property.bedrooms)).toEqual([1, 2, 3]);
+    expect(options.map((property) => property.price)).toEqual([180_000_000, 200_000_000, 350_000_000]);
+    expect(options.every((property) => property.area === "Ikate, Lekki")).toBe(true);
+    expect(options.every((property) => property.type === "Apartment")).toBe(true);
+    expect(properties[0].price).toBe(250_000_000);
+  });
+
+  it("uses the same 12 development photos for all three options, with an exterior cover", () => {
+    const options = properties.slice(4, 7);
+    expect(options).toHaveLength(3);
+    for (const property of options) {
+      expect(property.images).toHaveLength(12);
+      expect(property.images[0]).toBe("/images/approved/ikate-serviced-apartment-development/exterior.webp");
+      expect(property.images).toEqual(options[0].images);
+      expect(property.amenities).toEqual([]);
+    }
+  });
+
 });
