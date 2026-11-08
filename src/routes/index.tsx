@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const typeIcons = { "Detached House": Home, "Semi-Detached": Home, Terrace: Building2, Apartment: Building2, Land: Trees, Commercial: Landmark } as const;
+const typeIcons = { "Detached House": Home, "Semi-Detached": Home, Terrace: Building2, Apartment: Building2, Maisonette: Building2, Land: Trees, Commercial: Landmark } as const;
 
 function Index() {
   const featured = properties.filter((p) => p.featured);
