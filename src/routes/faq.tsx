@@ -5,7 +5,7 @@ import { PageHero } from "@/components/site/PageHero";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/faq")({
-  head: () => seo("Frequently Asked Questions", "Answers to common questions about buying, inspecting and listing property with TARMAR HOMES.", "/faq"),
+  head: () => seo("Frequently Asked Questions", "Answers to common questions about buying, inspecting and listing property with TAMAR HOMES.", "/faq"),
   component: FaqPage,
 });
 
