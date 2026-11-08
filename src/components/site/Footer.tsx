@@ -31,8 +31,8 @@ export function Footer() {
           <h3 className="mb-4 text-lg">Contact</h3>
           <ul className="space-y-3 text-sm text-primary-foreground/75">
             <li className="flex gap-2"><Phone className="h-4 w-4 text-leaf" />{SITE.phoneDisplay}</li>
-            <li className="flex gap-2"><Mail className="h-4 w-4 text-leaf" /><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
-            <li className="flex gap-2"><MessageCircle className="h-4 w-4 text-leaf" /><a href={whatsappLink("Hello TARMAR HOMES")} target="_blank" rel="noreferrer">Chat on WhatsApp</a></li>
+            {SITE.email && <li className="flex gap-2"><Mail className="h-4 w-4 text-leaf" /><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>}
+            <li className="flex gap-2"><MessageCircle className="h-4 w-4 text-leaf" /><a href={whatsappLink("Hello TAMAR HOMES")} target="_blank" rel="noreferrer">Chat on WhatsApp</a></li>
           </ul>
         </div>
         <div>
@@ -43,7 +43,7 @@ export function Footer() {
       </div>
       <div className="border-t border-primary-foreground/15">
         <div className="container-site flex flex-col gap-3 py-5 text-xs text-primary-foreground/60 md:flex-row md:items-center md:justify-between">
-          <p>© {new Date().getFullYear()} TARMAR HOMES. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} TAMAR HOMES. All rights reserved.</p>
           <ul className="flex flex-wrap gap-4">
             {LEGAL.map((l) => <li key={l.to}><Link to={l.to} className="hover:text-leaf">{l.label}</Link></li>)}
           </ul>
