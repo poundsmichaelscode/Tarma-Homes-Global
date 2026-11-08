@@ -46,12 +46,29 @@ function PropertyPage() {
     <div className="container-site py-10">
       <nav className="mb-6 text-sm text-muted-foreground"><Link to="/properties" className="hover:text-primary">Properties</Link> / {p.city} / <span className="text-foreground">{p.title}</span></nav>
 
-      <div className="grid gap-3 lg:grid-cols-[3fr_1fr]">
-        <img src={p.images[active]} alt={p.images[active].includes("image-pending") ? "Property photograph pending approval" : `${p.title} — photo ${active + 1}`} width={1280} height={896} className="aspect-[16/10] w-full rounded-2xl object-cover" />
-        <div className="grid grid-cols-3 gap-3 lg:grid-cols-1">
+      <div className="grid gap-4 lg:grid-cols-[minmax(0,3fr)_minmax(0,1fr)]">
+        <div className="relative overflow-hidden rounded-2xl bg-muted">
+          <img
+            src={p.images[active]}
+            alt={`${p.title}, photograph ${active + 1} of ${p.images.length}`}
+            onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "/images/image-pending.svg"; }}
+            width={1280}
+            height={960}
+            className="aspect-[4/3] w-full object-contain bg-muted lg:aspect-[16/10]"
+          />
+          <div className="absolute bottom-4 right-4 rounded-full bg-black/75 px-3 py-1.5 text-xs font-semibold text-white">
+            {active + 1} / {p.images.length}
+          </div>
+        </div>
+        <div className="grid max-h-[360px] grid-cols-3 gap-3 overflow-y-auto sm:grid-cols-4 lg:max-h-[640px] lg:grid-cols-2" aria-label="Property photo gallery">
           {p.images.map((img, i) => (
-            <button key={i} onClick={() => setActive(i)} aria-label={`Show photo ${i + 1}`} className={`overflow-hidden rounded-xl border-2 ${i === active ? "border-primary" : "border-transparent"}`}>
-              <img src={img} alt="" loading="lazy" className="aspect-[16/10] h-full w-full object-cover" />
+            <button key={img} type="button" onClick={() => setActive(i)}
+              aria-label={`View property photo ${i + 1}`}
+              aria-pressed={i === active}
+              className={`overflow-hidden rounded-xl border-2 transition hover:opacity-90 ${i === active ? "border-primary" : "border-transparent"}`}>
+              <img src={img} alt="" loading="lazy"
+                onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "/images/image-pending.svg"; }}
+                className="aspect-[4/3] h-full w-full object-cover" />
             </button>
           ))}
         </div>
