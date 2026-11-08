@@ -15,7 +15,7 @@ export const Route = createFileRoute("/properties/$slug")({
     return { property };
   },
   head: ({ loaderData, params }) => {
-    if (!loaderData) return { meta: [{ title: "Property not found | TARMAR HOMES" }, { name: "robots", content: "noindex" }] };
+    if (!loaderData) return { meta: [{ title: "Property not found | TAMAR HOMES" }, { name: "robots", content: "noindex" }] };
     const p = loaderData.property;
     const base = seo(`${p.title} in ${p.area}, ${p.city} — ${formatNaira(p.price)}`, `${p.summary} ${p.bedrooms ? `${p.bedrooms} bedrooms, ` : ""}${p.size}. For sale in ${p.area}, ${p.city}.`, `/properties/${params.slug}`, "product");
     return {
@@ -33,7 +33,7 @@ function PropertyPage() {
   const { property: p } = Route.useLoaderData();
   const [active, setActive] = useState(0);
   const [form, setForm] = useState({ name: "", phone: "", date: "", time: "10:00" });
-  const enquiry = `Hello TARMAR HOMES, I'm interested in "${p.title}" in ${p.area}, ${p.city} (${formatNaira(p.price)}).`;
+  const enquiry = `Hello TAMAR HOMES, I'm interested in "${p.title}" in ${p.area}, ${p.city} (${formatNaira(p.price)}).`;
   const specs = [
     { i: Tag, l: "Type", v: p.type },
     { i: Ruler, l: "Size", v: p.size },
