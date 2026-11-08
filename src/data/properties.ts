@@ -40,7 +40,20 @@ export const properties: Property[] = [
     size: "On request",
     parking: 0, // Not supplied.
     featured: true,
-    images: [approvedImagePending], // Replace ONLY with the actual approved Drive property image.
+    images: [
+      "/images/approved/ikate-serviced-apartment/exterior.webp",
+      "/images/approved/ikate-serviced-apartment/gallery-02.webp",
+      "/images/approved/ikate-serviced-apartment/gallery-03.webp",
+      "/images/approved/ikate-serviced-apartment/gallery-04.webp",
+      "/images/approved/ikate-serviced-apartment/gallery-05.webp",
+      "/images/approved/ikate-serviced-apartment/gallery-06.webp",
+      "/images/approved/ikate-serviced-apartment/gallery-07.webp",
+      "/images/approved/ikate-serviced-apartment/gallery-08.webp",
+      "/images/approved/ikate-serviced-apartment/gallery-09.webp",
+      "/images/approved/ikate-serviced-apartment/gallery-10.webp",
+      "/images/approved/ikate-serviced-apartment/gallery-11.webp",
+      "/images/approved/ikate-serviced-apartment/gallery-12.webp",
+    ], // User-supplied property photographs; copy files into public/images/approved/ikate-serviced-apartment.
     summary: "Three-bedroom serviced apartment in Ikate, Lekki, offered at ₦250 million, with an elevator and swimming pool.",
     description: [
       "A three-bedroom serviced apartment in Ikate, Lekki, Lagos, priced at ₦250 million.",
