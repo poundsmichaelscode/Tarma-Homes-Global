@@ -1,16 +1,17 @@
 import { Link } from "@tanstack/react-router";
 
+/**
+ * Temporary text-only mark while the approved Google Drive logo is awaiting access.
+ * Never substitute an icon or a recreated logo for the official brand artwork.
+ */
 export function Logo({ light = false }: { light?: boolean }) {
   return (
-    <Link to="/" className="flex items-center gap-2" aria-label="TARMAR HOMES home">
-      <span className="grid h-10 w-10 place-items-center rounded-lg bg-brand-gradient">
-        <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" aria-hidden>
-          <path d="M3 11 12 4l9 7" stroke="var(--leaf)" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M6 10v9h12v-9" stroke="var(--primary-foreground)" strokeWidth="2" strokeLinejoin="round" />
-        </svg>
+    <Link to="/" className="inline-flex flex-col leading-none" aria-label="Tamar Homes Global home">
+      <span className={`font-display text-xl tracking-wide ${light ? "text-white" : "text-primary"}`}>
+        TAMAR <span className={light ? "text-white" : "text-leaf"}>HOMES</span>
       </span>
-      <span className={`font-display text-xl leading-none tracking-wide ${light ? "text-primary-foreground" : "text-primary-deep"}`}>
-        TARMAR <span className="text-leaf">HOMES</span>
+      <span className={`mt-1 text-[9px] uppercase tracking-[0.18em] ${light ? "text-white/80" : "text-foreground/60"}`}>
+        Luxury Homes. Ambitious Living.
       </span>
     </Link>
   );
