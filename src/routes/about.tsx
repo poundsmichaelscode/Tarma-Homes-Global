@@ -1,5 +1,5 @@
 // Neutral placeholder until approved company photography is imported from Google Drive.
-const approvedImagePending = "/images/image-pending.svg";
+import { IMAGE_PENDING as approvedImagePending } from "@/lib/assets";
 const interior = approvedImagePending;
 
 import { createFileRoute, Link } from "@tanstack/react-router";
