@@ -76,3 +76,33 @@ Destination: `public/images/approved/ikate-serviced-apartment/`.
 **Binary asset delivery blocker:** the GitHub text-file connector supports updates to code but cannot read local binary files in this execution environment. The optimized WebP gallery is therefore bundled separately as `Tamar-Homes-Ikate-Property-Images.zip`. Extract the archive into the checked-out repository root before publishing or merging the PR. Until those files are present, listing images fall back to a neutral placeholder.
 
 Social links now appear in the footer for Instagram `@tamarhomes` and YouTube `Tamarhomes`. Verify the channel handle resolves to the intended brand profile before launch.
+
+## Second property — Orchid Lekki maisonette (2026-11-08)
+
+The owner supplied the following listing details: **3-Bedroom Maisonette with BQ**, **Orchid, Lekki, Lagos**, **₦160,000,000**. Type is recorded as Maisonette; BQ is listed as an amenity. Bathrooms, parking, floor area, exact street and title documents require further verification.
+
+Thirteen photographs were uploaded directly in the conversation, with the building exterior as the cover. The source photograph order and optimized WebP filenames are:
+
+1. `IMG_2734.JPG.jpeg` → `exterior.webp` (cover)
+2. `IMG_2729.JPG(1).jpeg` → `gallery-02.webp`
+3. `IMG_2728.JPG(1).jpeg` → `gallery-03.webp`
+4. `IMG_2736.JPG(1).jpeg` → `gallery-04.webp`
+5. `IMG_2735.JPG(1).jpeg` → `gallery-05.webp`
+6. `IMG_2733.JPG(1).jpeg` → `gallery-06.webp`
+7. `IMG_2731.JPG.jpeg` → `gallery-07.webp`
+8. `IMG_2720.JPG.jpeg` → `gallery-08.webp`
+9. `IMG_2722.JPG.jpeg` → `gallery-09.webp`
+10. `IMG_2732.JPG.jpeg` → `gallery-10.webp`
+11. `IMG_2723.JPG.jpeg` → `gallery-11.webp`
+12. `IMG_2724.JPG.jpeg` → `gallery-12.webp`
+13. `IMG_2721.JPG.jpeg` → `gallery-13.webp`
+
+Install into `public/images/approved/orchid-lekki-maisonette/` and verify 13 WebP files. This code branch references the photos, but the binary image files must be added to GitHub separately using the supplied asset archive `Tamar-Homes-Orchid-Lekki-Maisonette-Images.zip`. Until then, the existing image fallback shows a neutral placeholder.
+
+The Ikate serviced apartment remains first in the catalogue. The Orchid maisonette is second, and both are marked featured.
+
+### Verification status
+
+- Catalogue order, category, photo paths and listing data have source tests in `src/data/properties.test.ts`.
+- A local production build and test execution have not yet been confirmed.
+- Neither property photo archive has been automatically uploaded to the GitHub repository.
