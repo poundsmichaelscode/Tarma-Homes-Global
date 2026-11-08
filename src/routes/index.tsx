@@ -1,6 +1,9 @@
+// Neutral placeholder until approved company photography is imported from Google Drive.
+const approvedImagePending = "/images/image-pending.svg";
+const hero = approvedImagePending;
+
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Building2, FileCheck2, Handshake, Home, Landmark, MapPinned, MessageSquareQuote, Trees } from "lucide-react";
-import hero from "@/assets/hero.jpg";
 import { properties, PROPERTY_TYPES } from "@/data/properties";
 import { posts } from "@/data/blog";
 import { PropertyCard } from "@/components/site/PropertyCard";
