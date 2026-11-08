@@ -1,11 +1,13 @@
-// Contact details are placeholders until the company supplies real ones.
+// Official contact and branding information supplied by Tamar Homes Global.
 export const SITE = {
   name: "TAMAR HOMES",
-  tagline: "Premium properties for sale across Nigeria",
-  whatsapp: "2340000000000", // TODO: replace with real WhatsApp number (international format, no +)
-  phoneDisplay: "+234 000 000 0000",
-  email: "hello@tarmarhomes.com",
-  address: "Office address to be confirmed",
+  tagline: "Luxury Homes. Ambitious Living.",
+  whatsapp: "2347019669828",
+  phoneDisplay: "07019669828",
+  secondaryPhone: "07032167195",
+  // No company email is published until the address is verified.
+  email: "",
+  address: "Suite 2, Time Square Mall, beside Mega Chicken, Ikota, Lekki, Lagos, Nigeria",
 };
 
 export const NAV = [
@@ -25,3 +27,8 @@ export function formatNaira(amount: number): string {
 export function whatsappLink(message: string): string {
   return `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(message)}`;
 }
+
+// Address-based search is intentional: the mall's position is verified, but not the exact office suite coordinate.
+export const OFFICE_MAP_QUERY = "Time Square Mall, Ikota, Lekki, Lagos, Nigeria";
+export const OFFICE_MAP_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(OFFICE_MAP_QUERY)}`;
+export const OFFICE_MAP_EMBED_URL = `https://maps.google.com/maps?q=${encodeURIComponent(OFFICE_MAP_QUERY)}&output=embed`;
