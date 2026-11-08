@@ -29,4 +29,16 @@ describe("Tamar Homes property catalogue", () => {
     const results = filterProperties(properties, { city: "Lagos", type: "Maisonette" });
     expect(results.map((property) => property.slug)).toEqual(["3-bedroom-maisonette-with-bq-orchid-lekki"]);
   });
+  it("keeps Lekki Phase 1 detached duplex as the third listing with 14 photos", () => {
+    const property = properties[2];
+    expect(property.slug).toBe("5-bedroom-detached-duplex-bq-cinema-rooftop-lekki-phase-1");
+    expect(property.price).toBe(1_200_000_000);
+    expect(property.bedrooms).toBe(5);
+    expect(property.type).toBe("Detached House");
+    expect(property.area).toBe("Lekki Phase 1");
+    expect(property.amenities).toEqual(["Boys' quarters (BQ)", "Cinema", "Rooftop"]);
+    expect(property.images).toHaveLength(14);
+    expect(property.images[0]).toBe("/images/approved/lekki-phase-1-detached-duplex/exterior.webp");
+  });
+
 });
