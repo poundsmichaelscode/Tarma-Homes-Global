@@ -1,6 +1,9 @@
+// Neutral placeholder until approved company photography is imported from Google Drive.
+const approvedImagePending = "/images/image-pending.svg";
+const interior = approvedImagePending;
+
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Eye, ShieldCheck, Target } from "lucide-react";
-import interior from "@/assets/prop-interior.jpg";
 import { PageHero } from "@/components/site/PageHero";
 import { seo } from "@/lib/seo";
 
