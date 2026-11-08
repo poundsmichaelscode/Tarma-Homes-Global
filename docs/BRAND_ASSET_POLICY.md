@@ -106,3 +106,16 @@ The Ikate serviced apartment remains first in the catalogue. The Orchid maisonet
 - Catalogue order, category, photo paths and listing data have source tests in `src/data/properties.test.ts`.
 - A local production build and test execution have not yet been confirmed.
 - Neither property photo archive has been automatically uploaded to the GitHub repository.
+
+## New approved brand logo / favicon (2026-11-08)
+
+The owner approved the newly generated transparent Tamar Homes horizontal wordmark and a square green-purple house-mark favicon, adapted from their supplied official logo.
+
+- Header and footer: `public/tamar-logo.png` (transparent, responsive, contained; footer placed on white for contrast).
+- Browser tab: `public/favicon.ico` and `public/favicon-32x32.png`.
+- High-resolution icon: `public/favicon-192x192.png`, `public/favicon.png`.
+- Touch icon: `public/apple-touch-icon.png`.
+- HTML icon links use `?v=2` to avoid stale favicons.
+- Binary asset pack: `Tamar-Homes-Brand-Assets.zip`. Extract this pack into the repository root, preserving the `public/` directory structure, and commit the files.
+
+**Important:** Code references were committed to the development branch, but this tool connection cannot directly upload the generated binary images into GitHub. Images will not display until the ZIP assets are added and pushed to the branch. Do not merge before verifying both image rendering and favicons on desktop/mobile.
