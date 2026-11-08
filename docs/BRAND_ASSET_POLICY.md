@@ -47,3 +47,19 @@ The **logo** was supplied as a direct conversation attachment, not as a ZIP arch
 The original requirements contain an invalid email address (`info@tamarhomesglobal@gmail.com`). Do not publish it as a working contact method. Confirm the correct company mailbox. The phone/WhatsApp numbers in the brief are `07019669828` and `07032167195`.
 
 This file documents implementation and verification status. It does not represent completion of production migration or sign-off for a public launch.
+
+## Hero image and first listing (2026-11-08)
+
+The homepage hero is an **illustrative** contemporary apartment-building photograph sourced from Unsplash. It is not an image of Tamar Homes inventory or the Ikate apartment.
+
+- Credit: Aalo Lens (Unsplash)
+- Source: https://unsplash.com/photos/modern-apartment-building-with-balconies-and-greenery-B9OMpxCdrlc
+- Image: https://images.unsplash.com/photo-1758193431351-68538bf55ec3
+- License: https://unsplash.com/license
+
+The *only* active listing in the development catalogue is **3-Bedroom Serviced Apartment with Elevator & Pool**, Ikate, Lekki, Lagos — **₦250,000,000**, **3 bedrooms**, **elevator**, **swimming pool**. These facts were provided by the user. Bathroom count, square footage, parking, specific address, title documents, and the actual photography are awaiting confirmation. No unverified sample listings should appear in public inventory.
+
+User-supplied first-property Drive source:
+https://drive.google.com/drive/folders/1oyyH-zRR1-iRCRHTT5JJMcK_fS3EdERy?usp=sharing
+
+The folder could not be read via the available unauthenticated web access, so the listing uses a clearly labelled neutral placeholder **until the approved property photo is imported**. Do not use the illustrative hero image on property cards.
