@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+<title id="title">Property image pending approval</title><desc id="desc">Neutral placeholder; approved company photography will replace this image.</desc>
+<rect width="1200" height="800" fill="#f5f3f6"/>
+<rect x="36" y="36" width="1128" height="728" rx="20" fill="none" stroke="#d5ced9" stroke-width="2"/>
+<path d="M508 336l92-80 92 80v120H508V336z" fill="none" stroke="#8e1fa5" stroke-width="7" stroke-linejoin="round"/>
+<path d="M569 456v-75h62v75" fill="none" stroke="#22be45" stroke-width="7"/>
+<text x="600" y="536" font-family="Arial, sans-serif" font-size="30" text-anchor="middle" fill="#4c4252">Approved photography coming soon</text>
+</svg>
