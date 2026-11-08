@@ -1,11 +1,21 @@
 import { Link } from "@tanstack/react-router";
 
-/** Uploaded official Tamar Homes logo; the embedded asset is also used as a favicon. */
+/** Brand-approved transparent wordmark; used for both header and footer. */
 export function Logo({ light = false }: { light?: boolean }) {
   return (
-    <Link to="/" className={`inline-flex shrink-0 items-center rounded-md ${light ? "bg-white px-2 py-1" : ""}`} aria-label="Tamar Homes home">
-      <img src="/tamar-logo.svg" alt="Tamar Homes" width={126} height={64}
-        className="h-12 w-auto object-contain md:h-14" />
+    <Link
+      to="/"
+      aria-label="Tamar Homes home"
+      className={`inline-flex shrink-0 items-center justify-center rounded-md ${light ? "bg-white px-3 py-2" : ""}`}
+    >
+      <img
+        src="/tamar-logo.png"
+        alt="Tamar Homes"
+        width={1344}
+        height={510}
+        decoding="async"
+        className="block h-12 w-auto max-w-[170px] object-contain sm:h-14 sm:max-w-[195px] md:h-16 md:max-w-[230px]"
+      />
     </Link>
   );
 }
