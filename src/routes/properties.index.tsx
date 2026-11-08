@@ -15,7 +15,7 @@ export const Route = createFileRoute("/properties/")({
     minPrice: num(s.minPrice), maxPrice: num(s.maxPrice), beds: num(s.beds),
     sort: s.sort === "price-asc" || s.sort === "price-desc" ? s.sort : undefined,
   }),
-  head: () => seo("Properties for Sale", "Explore verified Tamar Homes property information and enquire about the available three-bedroom serviced apartment in Ikate, Lagos.", "/properties"),
+  head: () => seo("Properties for Sale", "Explore Tamar Homes properties for sale in Lagos, including serviced apartments in Ikate and Lekki Phase 1, maisonettes and detached duplexes.", "/properties"),
   component: PropertiesPage,
 });
 
