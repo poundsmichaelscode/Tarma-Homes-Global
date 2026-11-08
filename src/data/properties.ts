@@ -26,6 +26,21 @@ export interface Property {
 export const PROPERTY_TYPES: PropertyType[] = ["Detached House", "Semi-Detached", "Terrace", "Apartment", "Maisonette", "Land", "Commercial"];
 export const CITIES = ["Lagos", "Abuja", "Port Harcourt"] as const;
 
+const IKATE_DEVELOPMENT_IMAGES = [
+  "/images/approved/ikate-serviced-apartment-development/exterior.webp",
+  "/images/approved/ikate-serviced-apartment-development/gallery-02.webp",
+  "/images/approved/ikate-serviced-apartment-development/gallery-03.webp",
+  "/images/approved/ikate-serviced-apartment-development/gallery-04.webp",
+  "/images/approved/ikate-serviced-apartment-development/gallery-05.webp",
+  "/images/approved/ikate-serviced-apartment-development/gallery-06.webp",
+  "/images/approved/ikate-serviced-apartment-development/gallery-07.webp",
+  "/images/approved/ikate-serviced-apartment-development/gallery-08.webp",
+  "/images/approved/ikate-serviced-apartment-development/gallery-09.webp",
+  "/images/approved/ikate-serviced-apartment-development/gallery-10.webp",
+  "/images/approved/ikate-serviced-apartment-development/gallery-11.webp",
+  "/images/approved/ikate-serviced-apartment-development/gallery-12.webp",
+];
+
 export const properties: Property[] = [
   {
     slug: "3-bedroom-serviced-apartment-ikate",
@@ -169,6 +184,72 @@ export const properties: Property[] = [
     ],
     amenities: ["Elevator"],
     documents: [], // Title documentation not provided.
+  },
+  {
+    slug: "1-bedroom-serviced-apartment-ikate-development",
+    title: "1-Bedroom Serviced Apartment — Ikate Development",
+    type: "Apartment",
+    status: "For Sale",
+    price: 180_000_000,
+    city: "Lagos",
+    area: "Ikate, Lekki",
+    bedrooms: 1,
+    bathrooms: 0, // Not provided.
+    size: "On request",
+    parking: 0, // Not provided.
+    featured: true,
+    images: [...IKATE_DEVELOPMENT_IMAGES], // Shared development photographs; individual unit photos not yet identified.
+    summary: "1-bedroom serviced apartment option at the Ikate, Lekki development, offered at ₦180 million.",
+    description: [
+      "This is the 1-bedroom option within a serviced apartment development in Ikate, Lekki, Lagos, advertised at ₦180 million.",
+      "Photos show the overall development and representative spaces; they have not been verified as photographs of this specific unit configuration. Contact Tamar Homes to confirm unit layout, availability, facilities, finishing and title documents before making any payment.",
+    ],
+    amenities: [], // No development amenities independently confirmed.
+    documents: [],
+  },
+  {
+    slug: "2-bedroom-serviced-apartment-ikate-development",
+    title: "2-Bedroom Serviced Apartment — Ikate Development",
+    type: "Apartment",
+    status: "For Sale",
+    price: 200_000_000,
+    city: "Lagos",
+    area: "Ikate, Lekki",
+    bedrooms: 2,
+    bathrooms: 0, // Not provided.
+    size: "On request",
+    parking: 0, // Not provided.
+    featured: true,
+    images: [...IKATE_DEVELOPMENT_IMAGES], // Shared development photographs; individual unit photos not yet identified.
+    summary: "2-bedroom serviced apartment option at the Ikate, Lekki development, offered at ₦200 million.",
+    description: [
+      "This is the 2-bedroom option within a serviced apartment development in Ikate, Lekki, Lagos, advertised at ₦200 million.",
+      "Photos show the overall development and representative spaces; they have not been verified as photographs of this specific unit configuration. Contact Tamar Homes to confirm unit layout, availability, facilities, finishing and title documents before making any payment.",
+    ],
+    amenities: [], // No development amenities independently confirmed.
+    documents: [],
+  },
+  {
+    slug: "3-bedroom-serviced-apartment-ikate-development",
+    title: "3-Bedroom Serviced Apartment — Ikate Development",
+    type: "Apartment",
+    status: "For Sale",
+    price: 350_000_000,
+    city: "Lagos",
+    area: "Ikate, Lekki",
+    bedrooms: 3,
+    bathrooms: 0, // Not provided.
+    size: "On request",
+    parking: 0, // Not provided.
+    featured: true,
+    images: [...IKATE_DEVELOPMENT_IMAGES], // Shared development photographs; individual unit photos not yet identified.
+    summary: "3-bedroom serviced apartment option at the Ikate, Lekki development, offered at ₦350 million.",
+    description: [
+      "This is the 3-bedroom option within a serviced apartment development in Ikate, Lekki, Lagos, advertised at ₦350 million.",
+      "Photos show the overall development and representative spaces; they have not been verified as photographs of this specific unit configuration. Contact Tamar Homes to confirm unit layout, availability, facilities, finishing and title documents before making any payment.",
+    ],
+    amenities: [], // No development amenities independently confirmed.
+    documents: [],
   },
 ];
 
