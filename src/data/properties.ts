@@ -98,6 +98,43 @@ export const properties: Property[] = [
     amenities: ["Boys' quarters (BQ)"],
     documents: [],
   },
+  {
+    slug: "5-bedroom-detached-duplex-bq-cinema-rooftop-lekki-phase-1",
+    title: "5-Bedroom Detached Duplex with BQ, Cinema & Rooftop",
+    type: "Detached House",
+    status: "For Sale",
+    price: 1_200_000_000,
+    city: "Lagos",
+    area: "Lekki Phase 1",
+    bedrooms: 5,
+    bathrooms: 0, // Unconfirmed; do not advertise a guessed count.
+    size: "On request",
+    parking: 0, // Unconfirmed.
+    featured: true,
+    images: [
+      "/images/approved/lekki-phase-1-detached-duplex/exterior.webp",
+      "/images/approved/lekki-phase-1-detached-duplex/gallery-02.webp",
+      "/images/approved/lekki-phase-1-detached-duplex/gallery-03.webp",
+      "/images/approved/lekki-phase-1-detached-duplex/gallery-04.webp",
+      "/images/approved/lekki-phase-1-detached-duplex/gallery-05.webp",
+      "/images/approved/lekki-phase-1-detached-duplex/gallery-06.webp",
+      "/images/approved/lekki-phase-1-detached-duplex/gallery-07.webp",
+      "/images/approved/lekki-phase-1-detached-duplex/gallery-08.webp",
+      "/images/approved/lekki-phase-1-detached-duplex/gallery-09.webp",
+      "/images/approved/lekki-phase-1-detached-duplex/gallery-10.webp",
+      "/images/approved/lekki-phase-1-detached-duplex/gallery-11.webp",
+      "/images/approved/lekki-phase-1-detached-duplex/gallery-12.webp",
+      "/images/approved/lekki-phase-1-detached-duplex/gallery-13.webp",
+      "/images/approved/lekki-phase-1-detached-duplex/gallery-14.webp",
+    ],
+    summary: "Five-bedroom detached duplex with boys' quarters, a cinema and a rooftop in Lekki Phase 1, Lagos, offered at ₦1.2 billion.",
+    description: [
+      "A five-bedroom detached duplex in Lekki Phase 1, Lagos, offered at ₦1.2 billion.",
+      "The property is advertised with a boys' quarters (BQ), private cinema and rooftop area. The uploaded photographs show contemporary interiors and exterior spaces. Contact Tamar Homes for inspection details, title documentation and additional specifications.",
+    ],
+    amenities: ["Boys' quarters (BQ)", "Cinema", "Rooftop"],
+    documents: [], // Title documentation not supplied.
+  },
 ];
 
 export interface PropertyFilters {
