@@ -119,3 +119,13 @@ The owner approved the newly generated transparent Tamar Homes horizontal wordma
 - Binary asset pack: `Tamar-Homes-Brand-Assets.zip`. Extract this pack into the repository root, preserving the `public/` directory structure, and commit the files.
 
 **Important:** Code references were committed to the development branch, but this tool connection cannot directly upload the generated binary images into GitHub. Images will not display until the ZIP assets are added and pushed to the branch. Do not merge before verifying both image rendering and favicons on desktop/mobile.
+
+## Third property — Lekki Phase 1 detached duplex (2026-11-08)
+
+User-supplied description: **5-Bedroom Detached Duplex with BQ, Cinema & Rooftop**, **Lekki Phase 1, Lagos**, **₦1,200,000,000**. No claims were made about bathrooms, floor area, land size, exact address, parking capacity, or property documentation.
+
+The user uploaded 14 photo files directly in the chat. The first exterior photograph is the listing cover; the remaining 13 files are gallery slots. Both uploaded files `IMG_0666 (1).jpg` and `IMG_0666.jpg` appear to depict the same scene, so a future gallery curation pass may remove one duplicate.
+
+Image path in project: `public/images/approved/lekki-phase-1-detached-duplex/`.
+
+Install `Tamar-Homes-Lekki-Phase-1-Duplex-Images.zip` at the repository root to populate those paths. **Images have been packaged locally but are not yet uploaded to GitHub.** The code paths and test were committed to `feat/tamar-brand-asset-foundation` only. Validate the local build after installing assets and before merging.
