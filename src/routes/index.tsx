@@ -15,7 +15,7 @@ import { SERVICES } from "./services";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
-  head: () => seo("Premium Homes & Land for Sale in Nigeria", "Discover premium houses, apartments, land and commercial properties for sale in Lagos, Abuja and Port Harcourt with TARMAR HOMES.", "/"),
+  head: () => seo("Premium Homes & Land for Sale in Nigeria", "Discover premium houses, apartments, land and commercial properties for sale in Lagos, Abuja and Port Harcourt with TAMAR HOMES.", "/"),
   component: Index,
 });
 
@@ -67,7 +67,7 @@ function Index() {
 
       <section className="container-site grid items-center gap-12 py-20 lg:grid-cols-2">
         <div>
-          <SectionHeading eyebrow="About TARMAR HOMES" title="A property sales company built on clarity" sub="We help buyers find, inspect and purchase property with confidence — and help owners present their properties to serious buyers." />
+          <SectionHeading eyebrow="About TAMAR HOMES" title="A property sales company built on clarity" sub="We help buyers find, inspect and purchase property with confidence — and help owners present their properties to serious buyers." />
           <ul className="space-y-4">
             {[
               { i: FileCheck2, t: "Documentation shown upfront", d: "Every listing states the title documents the seller has provided." },
