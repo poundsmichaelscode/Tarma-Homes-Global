@@ -63,3 +63,16 @@ User-supplied first-property Drive source:
 https://drive.google.com/drive/folders/1oyyH-zRR1-iRCRHTT5JJMcK_fS3EdERy?usp=sharing
 
 The folder could not be read via the available unauthenticated web access, so the listing uses a clearly labelled neutral placeholder **until the approved property photo is imported**. Do not use the illustrative hero image on property cards.
+
+## Owner-uploaded Ikate property gallery (2026-11-08)
+
+The owner provided 12 original property photos directly in this chat. The listing now references their optimized, orientation-corrected WebP equivalents, in gallery order:
+
+- `exterior.webp` — exterior photograph (primary listing cover)
+- `gallery-02.webp` through `gallery-12.webp` — owner-supplied interior photographs
+
+Destination: `public/images/approved/ikate-serviced-apartment/`.
+
+**Binary asset delivery blocker:** the GitHub text-file connector supports updates to code but cannot read local binary files in this execution environment. The optimized WebP gallery is therefore bundled separately as `Tamar-Homes-Ikate-Property-Images.zip`. Extract the archive into the checked-out repository root before publishing or merging the PR. Until those files are present, listing images fall back to a neutral placeholder.
+
+Social links now appear in the footer for Instagram `@tamarhomes` and YouTube `Tamarhomes`. Verify the channel handle resolves to the intended brand profile before launch.
