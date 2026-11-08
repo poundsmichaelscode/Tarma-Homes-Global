@@ -1,7 +1,7 @@
 // Neutral placeholder until approved company photography is imported from Google Drive.
 import { IMAGE_PENDING as approvedImagePending } from "@/lib/assets";
 
-export type PropertyType = "Detached House" | "Semi-Detached" | "Terrace" | "Apartment" | "Land" | "Commercial";
+export type PropertyType = "Detached House" | "Semi-Detached" | "Terrace" | "Apartment" | "Maisonette" | "Land" | "Commercial";
 
 export interface Property {
   slug: string;
@@ -23,7 +23,7 @@ export interface Property {
   documents: string[];
 }
 
-export const PROPERTY_TYPES: PropertyType[] = ["Detached House", "Semi-Detached", "Terrace", "Apartment", "Land", "Commercial"];
+export const PROPERTY_TYPES: PropertyType[] = ["Detached House", "Semi-Detached", "Terrace", "Apartment", "Maisonette", "Land", "Commercial"];
 export const CITIES = ["Lagos", "Abuja", "Port Harcourt"] as const;
 
 export const properties: Property[] = [
@@ -61,6 +61,42 @@ export const properties: Property[] = [
     ],
     amenities: ["Elevator", "Swimming pool"],
     documents: [], // Title documentation requires confirmation.
+  },
+  {
+    slug: "3-bedroom-maisonette-with-bq-orchid-lekki",
+    title: "3-Bedroom Maisonette with BQ",
+    type: "Maisonette",
+    status: "For Sale",
+    price: 160_000_000,
+    city: "Lagos",
+    area: "Orchid, Lekki",
+    bedrooms: 3,
+    bathrooms: 0, // Bathroom count has not been confirmed.
+    size: "On request",
+    parking: 0, // Parking allocation has not been confirmed.
+    featured: true,
+    images: [
+      "/images/approved/orchid-lekki-maisonette/exterior.webp",
+      "/images/approved/orchid-lekki-maisonette/gallery-02.webp",
+      "/images/approved/orchid-lekki-maisonette/gallery-03.webp",
+      "/images/approved/orchid-lekki-maisonette/gallery-04.webp",
+      "/images/approved/orchid-lekki-maisonette/gallery-05.webp",
+      "/images/approved/orchid-lekki-maisonette/gallery-06.webp",
+      "/images/approved/orchid-lekki-maisonette/gallery-07.webp",
+      "/images/approved/orchid-lekki-maisonette/gallery-08.webp",
+      "/images/approved/orchid-lekki-maisonette/gallery-09.webp",
+      "/images/approved/orchid-lekki-maisonette/gallery-10.webp",
+      "/images/approved/orchid-lekki-maisonette/gallery-11.webp",
+      "/images/approved/orchid-lekki-maisonette/gallery-12.webp",
+      "/images/approved/orchid-lekki-maisonette/gallery-13.webp",
+    ],
+    summary: "Three-bedroom maisonette with a boys' quarters (BQ) in Orchid, Lekki, Lagos, offered at ₦160 million.",
+    description: [
+      "A three-bedroom maisonette with a boys' quarters in the Orchid area of Lekki, Lagos.",
+      "The supplied photographs show a contemporary multi-level residence, living areas, fitted kitchen, bedrooms and bathrooms. Additional specifications and title documents are available on enquiry, subject to confirmation.",
+    ],
+    amenities: ["Boys' quarters (BQ)"],
+    documents: [],
   },
 ];
 
