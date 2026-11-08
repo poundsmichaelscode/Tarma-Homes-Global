@@ -15,6 +15,12 @@
 
 **Access blocker:** the Drive folder contents are not yet accessible within the current development connection. No Drive image has been downloaded or claimed as approved.
 
+## Additional approved property source
+
+3. https://drive.google.com/drive/folders/1ALlGaOOCJUW0MbQdk-WVY7S-0PXwS5i5?usp=sharing — intended first listing, awaiting accessible verified photographs and property description.
+
+The **logo** was supplied as a direct conversation attachment, not as a ZIP archive asset. A reduced-size copy of that actual supplied logo is embedded into `public/tamar-logo.svg` and is used for the navigation, footer and favicon. This needs higher-resolution replacement for a final production deployment.
+
 ## Asset intake protocol
 
 1. Obtain access to the specific Drive folder or receive an explicit export from it.
@@ -29,9 +35,11 @@
 
 - [x] Recheck GitHub baseline and create a separate development branch.
 - [x] Document official palette and no-ZIP-photo policy.
-- [ ] Obtain Drive access and catalogue approved images.
-- [ ] Integrate the approved company logo in navigation, footer, favicon, and social previews.
-- [ ] Replace existing ZIP photo imports, validate image fallback components, and remove unapproved examples from public inventory.
+- [ ] Obtain Drive access and catalogue approved images, including the first-property folder.
+- [x] Integrate the directly supplied company logo in navigation, footer and favicon (small embedded copy; optimize/revalidate for production).
+- [ ] Configure social preview artwork using a high-resolution approved asset.
+- [x] Replace direct ZIP photo imports in principal pages and data files with an explicit neutral placeholder.
+- [ ] Remove unverified demonstration listing information from public inventory.
 - [ ] Design-system and Next.js App Router migration, followed by build/tests.
 
 ## Pending business verification
