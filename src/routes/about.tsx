@@ -8,7 +8,7 @@ import { PageHero } from "@/components/site/PageHero";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/about")({
-  head: () => seo("About Us", "Learn about TARMAR HOMES, a premium real estate sales company helping buyers and sellers across Nigeria.", "/about"),
+  head: () => seo("About Us", "Learn about TAMAR HOMES, a premium real estate sales company helping buyers and sellers across Nigeria.", "/about"),
   component: AboutPage,
 });
 
@@ -18,7 +18,7 @@ function AboutPage() {
       <PageHero eyebrow="About us" title="Helping people own property with confidence" />
       <section className="container-site grid items-center gap-12 py-16 lg:grid-cols-2">
         <div className="space-y-4 text-muted-foreground">
-          <p className="text-lg text-foreground">TARMAR HOMES is a real estate company focused on the sale of premium residential, land and commercial properties in Nigeria.</p>
+          <p className="text-lg text-foreground">TAMAR HOMES is a real estate company focused on the sale of premium residential, land and commercial properties in Nigeria.</p>
           <p>We believe buying property should be transparent. That's why our listings show pricing in Naira, the documentation provided by sellers, and a straightforward way to book an inspection.</p>
           <p>For property owners, we provide a professional platform to present their properties to serious buyers.</p>
           <Link to="/contact" className="inline-flex rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground hover:bg-primary-deep">Speak with our team</Link>
