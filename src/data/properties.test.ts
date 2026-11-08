@@ -41,4 +41,15 @@ describe("Tamar Homes property catalogue", () => {
     expect(property.images[0]).toBe("/images/approved/lekki-phase-1-detached-duplex/exterior.webp");
   });
 
+  it("lists the Lekki Phase 1 2-bedroom serviced apartment fourth with its 12 photos", () => {
+    const property = properties[3];
+    expect(property.slug).toBe("2-bedroom-serviced-apartment-with-elevator-lekki-phase-1");
+    expect(property.price).toBe(300_000_000);
+    expect(property.bedrooms).toBe(2);
+    expect(property.type).toBe("Apartment");
+    expect(property.amenities).toContain("Elevator");
+    expect(property.images).toHaveLength(12);
+    expect(property.images[0]).toBe("/images/approved/lekki-phase-1-two-bedroom-serviced-apartment/exterior.webp");
+  });
+
 });
