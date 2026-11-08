@@ -5,8 +5,8 @@ export const SITE = {
   whatsapp: "2347019669828",
   phoneDisplay: "07019669828",
   secondaryPhone: "07032167195",
-  // No company email is published until the address is verified.
-  email: "",
+  // Official contact email supplied by Tamar Homes.
+  email: "info@tarmahomesglobal.com",
   address: "Suite 2, Time Square Mall, beside Mega Chicken, Ikota, Lekki, Lagos, Nigeria",
 };
 
