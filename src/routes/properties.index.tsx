@@ -15,7 +15,7 @@ export const Route = createFileRoute("/properties/")({
     minPrice: num(s.minPrice), maxPrice: num(s.maxPrice), beds: num(s.beds),
     sort: s.sort === "price-asc" || s.sort === "price-desc" ? s.sort : undefined,
   }),
-  head: () => seo("Properties for Sale", "Search and filter houses, apartments, land and commercial properties for sale in Lagos, Abuja and Port Harcourt.", "/properties"),
+  head: () => seo("Properties for Sale", "Explore verified Tamar Homes property information and enquire about the available three-bedroom serviced apartment in Ikate, Lagos.", "/properties"),
   component: PropertiesPage,
 });
 
