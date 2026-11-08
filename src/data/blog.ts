@@ -1,7 +1,10 @@
-import hero from "@/assets/hero.jpg";
-import duplex from "@/assets/prop-duplex.jpg";
-import interior from "@/assets/prop-interior.jpg";
-import apartment from "@/assets/prop-apartment.jpg";
+// Neutral placeholder until approved company photography is imported from Google Drive.
+const approvedImagePending = "/images/image-pending.svg";
+const hero = approvedImagePending;
+const duplex = approvedImagePending;
+const interior = approvedImagePending;
+const apartment = approvedImagePending;
+
 
 export const BLOG_CATEGORIES = ["Real Estate Insights", "Buying Guides", "Investment", "Market Trends", "Architecture", "Company Updates"] as const;
 export type BlogCategory = (typeof BLOG_CATEGORIES)[number];
