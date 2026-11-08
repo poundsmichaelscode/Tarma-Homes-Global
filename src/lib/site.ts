@@ -1,6 +1,6 @@
 // Contact details are placeholders until the company supplies real ones.
 export const SITE = {
-  name: "TARMAR HOMES",
+  name: "TAMAR HOMES",
   tagline: "Premium properties for sale across Nigeria",
   whatsapp: "2340000000000", // TODO: replace with real WhatsApp number (international format, no +)
   phoneDisplay: "+234 000 000 0000",
