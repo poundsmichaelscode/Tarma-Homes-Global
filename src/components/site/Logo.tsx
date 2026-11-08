@@ -1,18 +1,11 @@
 import { Link } from "@tanstack/react-router";
 
-/**
- * Temporary text-only mark while the approved Google Drive logo is awaiting access.
- * Never substitute an icon or a recreated logo for the official brand artwork.
- */
+/** Uploaded official Tamar Homes logo; the embedded asset is also used as a favicon. */
 export function Logo({ light = false }: { light?: boolean }) {
   return (
-    <Link to="/" className="inline-flex flex-col leading-none" aria-label="Tamar Homes Global home">
-      <span className={`font-display text-xl tracking-wide ${light ? "text-white" : "text-primary"}`}>
-        TAMAR <span className={light ? "text-white" : "text-leaf"}>HOMES</span>
-      </span>
-      <span className={`mt-1 text-[9px] uppercase tracking-[0.18em] ${light ? "text-white/80" : "text-foreground/60"}`}>
-        Luxury Homes. Ambitious Living.
-      </span>
+    <Link to="/" className={`inline-flex shrink-0 items-center rounded-md ${light ? "bg-white px-2 py-1" : ""}`} aria-label="Tamar Homes home">
+      <img src="/tamar-logo.svg" alt="Tamar Homes" width={126} height={64}
+        className="h-12 w-auto object-contain md:h-14" />
     </Link>
   );
 }
