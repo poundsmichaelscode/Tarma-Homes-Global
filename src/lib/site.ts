@@ -20,6 +20,19 @@ export const NAV = [
   { to: "/contact", label: "Contact Us" },
 ] as const;
 
+export const SOCIALS = {
+  instagram: {
+    label: "Instagram",
+    href: "https://www.instagram.com/tamarhomes?rpxt=MXU1cncwdXJ2czh5dA==",
+    handle: "@tamarhomes",
+  },
+  youtube: {
+    label: "YouTube",
+    href: "https://www.youtube.com/@tamarhomes",
+    handle: "Tamarhomes",
+  },
+} as const;
+
 export function formatNaira(amount: number): string {
   return new Intl.NumberFormat("en-NG", { style: "currency", currency: "NGN", maximumFractionDigits: 0 }).format(amount);
 }
