@@ -135,6 +135,41 @@ export const properties: Property[] = [
     amenities: ["Boys' quarters (BQ)", "Cinema", "Rooftop"],
     documents: [], // Title documentation not supplied.
   },
+  {
+    slug: "2-bedroom-serviced-apartment-with-elevator-lekki-phase-1",
+    title: "2-Bedroom Serviced Apartment with Elevator",
+    type: "Apartment",
+    status: "For Sale",
+    price: 300_000_000,
+    city: "Lagos",
+    area: "Lekki Phase 1",
+    bedrooms: 2,
+    bathrooms: 0, // Not verified; do not advertise a bathroom count.
+    size: "On request",
+    parking: 0, // Parking allocation not confirmed.
+    featured: true,
+    images: [
+      "/images/approved/lekki-phase-1-two-bedroom-serviced-apartment/exterior.webp",
+      "/images/approved/lekki-phase-1-two-bedroom-serviced-apartment/gallery-02.webp",
+      "/images/approved/lekki-phase-1-two-bedroom-serviced-apartment/gallery-03.webp",
+      "/images/approved/lekki-phase-1-two-bedroom-serviced-apartment/gallery-04.webp",
+      "/images/approved/lekki-phase-1-two-bedroom-serviced-apartment/gallery-05.webp",
+      "/images/approved/lekki-phase-1-two-bedroom-serviced-apartment/gallery-06.webp",
+      "/images/approved/lekki-phase-1-two-bedroom-serviced-apartment/gallery-07.webp",
+      "/images/approved/lekki-phase-1-two-bedroom-serviced-apartment/gallery-08.webp",
+      "/images/approved/lekki-phase-1-two-bedroom-serviced-apartment/gallery-09.webp",
+      "/images/approved/lekki-phase-1-two-bedroom-serviced-apartment/gallery-10.webp",
+      "/images/approved/lekki-phase-1-two-bedroom-serviced-apartment/gallery-11.webp",
+      "/images/approved/lekki-phase-1-two-bedroom-serviced-apartment/gallery-12.webp",
+    ],
+    summary: "Two-bedroom serviced apartment with elevator in Lekki Phase 1, Lagos, offered for ₦300 million.",
+    description: [
+      "This two-bedroom serviced apartment in Lekki Phase 1, Lagos, is offered for ₦300 million.",
+      "The property is advertised with elevator access. The supplied photographs show the apartment building, interior living spaces, kitchen and bathrooms. Contact Tamar Homes to arrange an inspection and request confirmed specifications and title documents.",
+    ],
+    amenities: ["Elevator"],
+    documents: [], // Title documentation not provided.
+  },
 ];
 
 export interface PropertyFilters {
