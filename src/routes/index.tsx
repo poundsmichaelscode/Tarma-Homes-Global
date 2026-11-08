@@ -1,6 +1,5 @@
-// Neutral placeholder until approved company photography is imported from Google Drive.
-import { IMAGE_PENDING as approvedImagePending } from "@/lib/assets";
-const hero = approvedImagePending;
+// Illustrative hero photo, licensed through Unsplash. Not an advertised Tamar Homes property.
+const hero = "https://images.unsplash.com/photo-1758193431351-68538bf55ec3?auto=format&fit=crop&w=2000&q=85";
 
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Building2, FileCheck2, Handshake, Home, Landmark, MapPinned, MessageSquareQuote, Trees } from "lucide-react";
@@ -26,19 +25,19 @@ function Index() {
   return (
     <>
       <section className="relative isolate overflow-hidden">
-        <img src={hero} alt="Modern luxury home at sunset" width={1920} height={1088} className="absolute inset-0 -z-20 h-full w-full object-cover" />
+        <img src={hero} alt="Illustrative contemporary apartment building with planted balconies; not a Tamar Homes property listing" width={1920} height={1088} className="absolute inset-0 -z-20 h-full w-full object-cover" />
         <div className="absolute inset-0 -z-10 bg-hero-overlay" />
         <div className="container-site py-24 md:py-36">
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-leaf">Property sales across Nigeria</p>
-          <h1 className="max-w-2xl text-5xl leading-[1.05] text-primary-foreground md:text-7xl">Find a home worth owning.</h1>
-          <p className="mt-5 max-w-lg text-lg text-primary-foreground/85">Houses, apartments, land and commercial properties for sale — with clear documentation and guided inspections.</p>
+          <h1 className="max-w-2xl text-5xl leading-[1.05] text-primary-foreground md:text-7xl">Find a Home That Matches Your Ambition.</h1>
+          <p className="mt-5 max-w-lg text-lg text-primary-foreground/85">Explore exceptional homes and property investment opportunities with Tamar Homes Global. Enquire directly and book a guided inspection.</p>
           <div className="mt-10 max-w-4xl"><SearchBar /></div>
         </div>
       </section>
 
       <section className="container-site py-20">
         <div className="flex flex-wrap items-end justify-between gap-4">
-          <SectionHeading eyebrow="Featured listings" title="Hand-picked properties" />
+          <SectionHeading eyebrow="Featured listings" title="Explore our available property" />
           <Link to="/properties" className="mb-10 inline-flex items-center gap-2 font-semibold text-primary">View all <ArrowRight className="h-4 w-4" /></Link>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -70,7 +69,7 @@ function Index() {
           <SectionHeading eyebrow="About TAMAR HOMES" title="A property sales company built on clarity" sub="We help buyers find, inspect and purchase property with confidence — and help owners present their properties to serious buyers." />
           <ul className="space-y-4">
             {[
-              { i: FileCheck2, t: "Documentation shown upfront", d: "Every listing states the title documents the seller has provided." },
+              { i: FileCheck2, t: "Documentation review", d: "Request verified title documentation and carry out independent legal due diligence before purchase." },
               { i: MapPinned, t: "Guided inspections", d: "Schedule a viewing directly from any property page." },
               { i: Handshake, t: "Direct communication", d: "Speak to our team on WhatsApp, phone or email." },
             ].map(({ i: I, t, d }) => (
@@ -79,7 +78,7 @@ function Index() {
           </ul>
           <Link to="/about" className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground hover:bg-primary-deep">Learn about us <ArrowRight className="h-4 w-4" /></Link>
         </div>
-        <img src={properties[1].images[0]} alt="Modern terrace duplex" loading="lazy" width={1280} height={896} className="rounded-3xl shadow-card" />
+        <img src={hero} alt="Illustrative modern apartment building exterior" loading="lazy" width={1280} height={896} className="w-full rounded-3xl object-cover shadow-card" />
       </section>
 
       <section className="bg-brand-gradient py-20 text-primary-foreground">
