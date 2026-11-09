@@ -25,6 +25,37 @@ function AboutPage() {
         </div>
         <figure><img src={aboutImage} alt="Contemporary premium home with expansive glass windows and welcoming architectural design, illustrating Tamar Homes’ vision" loading="lazy" decoding="async" width={1280} height={896} className="aspect-[4/3] w-full rounded-3xl object-cover shadow-card" /><figcaption className="mt-2 text-xs text-muted-foreground">Illustrative architecture photography; not a Tamar Homes property listing. <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline">Unsplash License</a>.</figcaption></figure>
       </section>
+      <section aria-labelledby="meet-our-ceo" className="border-t border-border bg-background py-16">
+        <div className="container-site grid items-center gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-16">
+          <figure className="mx-auto w-full max-w-md lg:mx-0">
+            <img
+              src="/images/team/olajumoke-esther-rhema.webp"
+              alt="Olajumoke Esther Rhema, CEO of Tamar Homes"
+              loading="lazy"
+              decoding="async"
+              width={960}
+              height={1280}
+              className="aspect-[3/4] w-full rounded-3xl object-cover object-top shadow-card"
+            />
+          </figure>
+          <div className="space-y-5">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-leaf-deep">Leadership</p>
+            <h2 id="meet-our-ceo" className="text-3xl font-semibold text-primary-deep sm:text-4xl">Meet our CEO</h2>
+            <div>
+              <h3 className="text-2xl font-semibold text-foreground">Olajumoke Esther Rhema</h3>
+              <p className="mt-1 text-base font-semibold text-primary">Chief Executive Officer, TAMAR HOMES</p>
+            </div>
+            <p className="max-w-xl leading-relaxed text-muted-foreground">
+              Meet the leader behind TAMAR HOMES. Our commitment to transparency,
+              professionalism and confident property decisions guides the experience
+              we aim to provide for buyers, sellers and property owners.
+            </p>
+            <Link to="/contact" className="inline-flex rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground hover:bg-primary-deep">
+              Get in touch
+            </Link>
+          </div>
+        </div>
+      </section>
       <section className="bg-surface py-16">
         <div className="container-site grid gap-6 md:grid-cols-3">
           {[
