@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, MessageCircle, Phone } from "lucide-react";
-import { NAV, SITE, whatsappLink } from "@/lib/site";
+import { Instagram, Mail, MessageCircle, Phone, Youtube } from "lucide-react";
+import { NAV, SITE, SOCIALS, whatsappLink } from "@/lib/site";
 import { Logo } from "./Logo";
 import { Newsletter } from "./Newsletter";
 
@@ -18,7 +18,17 @@ export function Footer() {
       <div className="container-site grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-4">
         <div className="space-y-4">
           <Logo light />
-          <p className="text-sm text-primary-foreground/70">{SITE.tagline}.</p>
+          <p className="text-sm text-primary-foreground/70">{SITE.tagline}</p>
+          <div className="flex items-center gap-3" aria-label="Tamar Homes social media">
+            <a href={SOCIALS.instagram.href} target="_blank" rel="noopener noreferrer" aria-label="Tamar Homes Instagram"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/25 transition-colors hover:border-leaf hover:text-leaf">
+              <Instagram className="h-5 w-5" aria-hidden="true" />
+            </a>
+            <a href={SOCIALS.youtube.href} target="_blank" rel="noopener noreferrer" aria-label="Tamar Homes YouTube"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/25 transition-colors hover:border-leaf hover:text-leaf">
+              <Youtube className="h-5 w-5" aria-hidden="true" />
+            </a>
+          </div>
         </div>
         <div>
           <h3 className="mb-4 text-lg">Explore</h3>
@@ -31,8 +41,9 @@ export function Footer() {
           <h3 className="mb-4 text-lg">Contact</h3>
           <ul className="space-y-3 text-sm text-primary-foreground/75">
             <li className="flex gap-2"><Phone className="h-4 w-4 text-leaf" />{SITE.phoneDisplay}</li>
-            <li className="flex gap-2"><Mail className="h-4 w-4 text-leaf" /><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
-            <li className="flex gap-2"><MessageCircle className="h-4 w-4 text-leaf" /><a href={whatsappLink("Hello TARMAR HOMES")} target="_blank" rel="noreferrer">Chat on WhatsApp</a></li>
+            <li className="flex gap-2"><Phone className="h-4 w-4 text-leaf" />{SITE.secondaryPhone}</li>
+            {SITE.email && <li className="flex gap-2"><Mail className="h-4 w-4 text-leaf" /><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>}
+            <li className="flex gap-2"><MessageCircle className="h-4 w-4 text-leaf" /><a href={whatsappLink("Hello TAMAR HOMES")} target="_blank" rel="noreferrer">Chat on WhatsApp</a></li>
           </ul>
         </div>
         <div>
@@ -43,7 +54,7 @@ export function Footer() {
       </div>
       <div className="border-t border-primary-foreground/15">
         <div className="container-site flex flex-col gap-3 py-5 text-xs text-primary-foreground/60 md:flex-row md:items-center md:justify-between">
-          <p>© {new Date().getFullYear()} TARMAR HOMES. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} TAMAR HOMES. All rights reserved.</p>
           <ul className="flex flex-wrap gap-4">
             {LEGAL.map((l) => <li key={l.to}><Link to={l.to} className="hover:text-leaf">{l.label}</Link></li>)}
           </ul>

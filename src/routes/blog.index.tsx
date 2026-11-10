@@ -6,7 +6,7 @@ import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/blog/")({
   validateSearch: (s: Record<string, unknown>): { category?: string } => ({ category: typeof s.category === "string" ? s.category : undefined }),
-  head: () => seo("Blog — Real Estate Insights & Buying Guides", "Real estate insights, buying guides, investment, market trends, architecture and company updates from TARMAR HOMES.", "/blog"),
+  head: () => seo("Blog — Real Estate Insights & Buying Guides", "Real estate insights, buying guides, investment, market trends, architecture and company updates from TAMAR HOMES.", "/blog"),
   component: BlogPage,
 });
 

@@ -3,9 +3,10 @@ import { EnquiryForm } from "@/components/site/EnquiryForm";
 import { PageHero } from "@/components/site/PageHero";
 import { CITIES, PROPERTY_TYPES } from "@/data/properties";
 import { seo } from "@/lib/seo";
+import { SITE } from "@/lib/site";
 
 export const Route = createFileRoute("/list-your-property")({
-  head: () => seo("List Your Property for Sale", "Sell your house, land or commercial property with TARMAR HOMES. Send us your property details to get started.", "/list-your-property"),
+  head: () => seo("List Your Property for Sale", "Sell your house, land or commercial property with TAMAR HOMES. Send us your property details to get started.", "/list-your-property"),
   component: ListPage,
 });
 
@@ -16,6 +17,7 @@ function ListPage() {
         <p>Tell us about the property you'd like to sell. Our team will review the details and contact you about next steps.</p>
       </PageHero>
       <div className="container-site max-w-4xl py-14">
+        <p className="mb-6 text-sm text-muted-foreground">You can also email your property details to <a href={`mailto:${SITE.email}?subject=${encodeURIComponent("List my property")}`} className="font-semibold text-primary underline underline-offset-2">{SITE.email}</a>.</p>
         <EnquiryForm title="Property details" intro="Hello TARMAR HOMES, I'd like to list a property for sale." submitLabel="Submit via WhatsApp"
           fields={[
             { name: "name", label: "Owner / agent name" },

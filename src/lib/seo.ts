@@ -1,5 +1,5 @@
 export function seo(title: string, description: string, path: string, type = "website") {
-  const full = `${title} | TARMAR HOMES`;
+  const full = `${title} | TAMAR HOMES`;
   return {
     meta: [
       { title: full },

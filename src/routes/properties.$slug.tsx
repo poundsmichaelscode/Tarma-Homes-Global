@@ -5,7 +5,7 @@ import { toast } from "sonner";
 import { getProperty, relatedProperties } from "@/data/properties";
 import { PropertyCard } from "@/components/site/PropertyCard";
 import { fieldClass } from "@/components/site/SearchBar";
-import { formatNaira, whatsappLink } from "@/lib/site";
+import { formatNaira, SITE, whatsappLink } from "@/lib/site";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/properties/$slug")({
@@ -15,7 +15,7 @@ export const Route = createFileRoute("/properties/$slug")({
     return { property };
   },
   head: ({ loaderData, params }) => {
-    if (!loaderData) return { meta: [{ title: "Property not found | TARMAR HOMES" }, { name: "robots", content: "noindex" }] };
+    if (!loaderData) return { meta: [{ title: "Property not found | TAMAR HOMES" }, { name: "robots", content: "noindex" }] };
     const p = loaderData.property;
     const base = seo(`${p.title} in ${p.area}, ${p.city} — ${formatNaira(p.price)}`, `${p.summary} ${p.bedrooms ? `${p.bedrooms} bedrooms, ` : ""}${p.size}. For sale in ${p.area}, ${p.city}.`, `/properties/${params.slug}`, "product");
     return {
@@ -33,10 +33,10 @@ function PropertyPage() {
   const { property: p } = Route.useLoaderData();
   const [active, setActive] = useState(0);
   const [form, setForm] = useState({ name: "", phone: "", date: "", time: "10:00" });
-  const enquiry = `Hello TARMAR HOMES, I'm interested in "${p.title}" in ${p.area}, ${p.city} (${formatNaira(p.price)}).`;
+  const enquiry = `Hello Tamar Homes Global, I'm interested in "${p.title}" in ${p.area}, ${p.city} (${formatNaira(p.price)}).`;
   const specs = [
     { i: Tag, l: "Type", v: p.type },
-    { i: Ruler, l: "Size", v: p.size },
+    ...(p.size !== "On request" ? [{ i: Ruler, l: "Size", v: p.size }] : []),
     ...(p.bedrooms ? [{ i: BedDouble, l: "Bedrooms", v: String(p.bedrooms) }] : []),
     ...(p.bathrooms ? [{ i: Bath, l: "Bathrooms", v: String(p.bathrooms) }] : []),
     ...(p.parking ? [{ i: Car, l: "Parking", v: `${p.parking} cars` }] : []),
@@ -46,12 +46,29 @@ function PropertyPage() {
     <div className="container-site py-10">
       <nav className="mb-6 text-sm text-muted-foreground"><Link to="/properties" className="hover:text-primary">Properties</Link> / {p.city} / <span className="text-foreground">{p.title}</span></nav>
 
-      <div className="grid gap-3 lg:grid-cols-[3fr_1fr]">
-        <img src={p.images[active]} alt={`${p.title} — photo ${active + 1}`} width={1280} height={896} className="aspect-[16/10] w-full rounded-2xl object-cover" />
-        <div className="grid grid-cols-3 gap-3 lg:grid-cols-1">
+      <div className="grid gap-4 lg:grid-cols-[minmax(0,3fr)_minmax(0,1fr)]">
+        <div className="relative overflow-hidden rounded-2xl bg-muted">
+          <img
+            src={p.images[active]}
+            alt={`${p.title}, photograph ${active + 1} of ${p.images.length}`}
+            onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "/images/image-pending.svg"; }}
+            width={1280}
+            height={960}
+            className="aspect-[4/3] w-full object-contain bg-muted lg:aspect-[16/10]"
+          />
+          <div className="absolute bottom-4 right-4 rounded-full bg-black/75 px-3 py-1.5 text-xs font-semibold text-white">
+            {active + 1} / {p.images.length}
+          </div>
+        </div>
+        <div className="grid max-h-[360px] grid-cols-3 gap-3 overflow-y-auto sm:grid-cols-4 lg:max-h-[640px] lg:grid-cols-2" aria-label="Property photo gallery">
           {p.images.map((img, i) => (
-            <button key={i} onClick={() => setActive(i)} aria-label={`Show photo ${i + 1}`} className={`overflow-hidden rounded-xl border-2 ${i === active ? "border-primary" : "border-transparent"}`}>
-              <img src={img} alt="" loading="lazy" className="aspect-[16/10] h-full w-full object-cover" />
+            <button key={img} type="button" onClick={() => setActive(i)}
+              aria-label={`View property photo ${i + 1}`}
+              aria-pressed={i === active}
+              className={`overflow-hidden rounded-xl border-2 transition hover:opacity-90 ${i === active ? "border-primary" : "border-transparent"}`}>
+              <img src={img} alt="" loading="lazy"
+                onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "/images/image-pending.svg"; }}
+                className="aspect-[4/3] h-full w-full object-cover" />
             </button>
           ))}
         </div>
@@ -85,11 +102,11 @@ function PropertyPage() {
             <ul className="grid gap-3 sm:grid-cols-2">{p.amenities.map((a) => <li key={a} className="flex items-center gap-2"><Check className="h-4 w-4 text-leaf-deep" />{a}</li>)}</ul>
           </section>
 
-          <section>
+          {p.documents.length > 0 && <section>
             <h2 className="mb-4 text-2xl">Documentation</h2>
             <ul className="space-y-2">{p.documents.map((d) => <li key={d} className="flex items-center gap-2"><FileText className="h-4 w-4 text-primary" />{d}</li>)}</ul>
             <p className="mt-4 rounded-xl bg-accent p-4 text-sm text-accent-foreground">Documents listed are as stated by the seller. Please verify all title documents with your own lawyer before making any payment.</p>
-          </section>
+          </section>}
 
           <section>
             <h2 className="mb-4 text-2xl">Location</h2>
@@ -111,6 +128,7 @@ function PropertyPage() {
             }}
           >
             <h2 className="text-2xl">Schedule an Inspection</h2>
+            <p className="text-sm text-muted-foreground">Prefer email? <a className="font-semibold text-primary underline underline-offset-2" href={`mailto:${SITE.email}?subject=${encodeURIComponent(`Property enquiry: ${p.title}`)}`}>{SITE.email}</a></p>
             <input required aria-label="Full name" placeholder="Full name" className={fieldClass} value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
             <input required aria-label="Phone number" type="tel" placeholder="Phone number" className={fieldClass} value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} />
             <div className="grid grid-cols-2 gap-3">
