@@ -118,6 +118,36 @@ function AboutPage() {
           </figure>
         </div>
       </section>
+      <section aria-labelledby="meet-our-digital-marketer" className="border-t border-border bg-surface/40 py-16">
+        <div className="container-site grid items-center gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:gap-16">
+          <div className="order-2 space-y-5 lg:order-1">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-leaf-deep">Our team</p>
+            <h2 id="meet-our-digital-marketer" className="text-3xl font-semibold text-primary-deep sm:text-4xl">Meet our Digital Marketer</h2>
+            <div>
+              <h3 className="text-2xl font-semibold text-foreground">Oladimeji Tunji Alaba</h3>
+              <p className="mt-1 text-base font-semibold text-primary">Digital Marketer / Sales, TAMAR HOMES</p>
+            </div>
+            <p className="max-w-xl leading-relaxed text-muted-foreground">
+              Oladimeji supports the TAMAR HOMES team in digital marketing and sales,
+              helping connect prospective clients with our property offerings.
+            </p>
+            <Link to="/contact" className="inline-flex rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground hover:bg-primary-deep">
+              Enquire about a property
+            </Link>
+          </div>
+          <figure className="order-1 mx-auto w-full max-w-md lg:order-2 lg:mx-0">
+            <img
+              src="/images/team/oladimeji-tunji-alaba.webp"
+              alt="Oladimeji Tunji Alaba, Digital Marketer and Sales at Tamar Homes"
+              loading="lazy"
+              decoding="async"
+              width={560}
+              height={818}
+              className="aspect-[4/5] w-full rounded-3xl object-cover object-top shadow-card"
+            />
+          </figure>
+        </div>
+      </section>
       <section className="bg-surface py-16">
         <div className="container-site grid gap-6 md:grid-cols-3">
           {[
